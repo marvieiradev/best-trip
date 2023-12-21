@@ -12,9 +12,9 @@ const config: Config = {
         "search-background": "url(/world-map.png)",
       },
       colors: {
-        primary: "#590BD8",
-        primaryLighter: "#DDD5EA",
-        primaryDarker: "#312A4F",
+        primary: "#0CC9CF",
+        primaryLighter: "#C2FDFF",
+        primaryDarker: "#006C9E",
         grayPrimary: "#717171",
         grayLighter: "#BBBFBF",
         walterWhite: "#F5F5F5",
