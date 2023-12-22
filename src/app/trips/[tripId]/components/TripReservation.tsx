@@ -22,7 +22,10 @@ const TripReservation = ({ trip }: TripReservationProps) => {
                     <p className="font-semibold text-md text-primaryDarker">Total: 7 noites</p>
                     <p className="font-semibold text-md text-primaryDarker">R$ 0,00</p>
                 </div>
-                <Button className="mt-3">Reservar agora</Button>
+                <div className="pb-10 border-b border-b-grayLighter w-full">
+                    <Button className="mt-3 w-full">Reservar agora</Button>
+                </div>
+
             </div>
         </div>
     );
