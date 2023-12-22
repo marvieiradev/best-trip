@@ -1,6 +1,7 @@
 'use client';
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineMenu } from "react-icons/ai"
 import { CiLogout } from "react-icons/ci"
@@ -17,7 +18,9 @@ const Header = () => {
     return (
         <div className="container mx-auto p-5 py-0 h-[93px] flex justify-between items-center">
             <div className="relative h-[32px] w-[132px]">
-                <Image src="/logo.svg" alt="best trip" fill />
+                <Link href={"/"}>
+                    <Image src="/logo.svg" alt="best trip" fill />
+                </Link>
             </div>
 
             {status === 'unauthenticated' && (
