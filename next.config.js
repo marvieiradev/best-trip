@@ -9,7 +9,7 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'images.unsplash.com',
+                hostname: 'best-trip.s3.amazonaws.com',
                 port: '',
             },
         ],
