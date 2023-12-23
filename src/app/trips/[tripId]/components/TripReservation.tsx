@@ -4,12 +4,15 @@ import Button from "@/components/Button";
 import DatePicker from "@/components/DatePicker";
 import Input from "@/components/Input";
 import { Trip } from "@prisma/client";
+import { differenceInDays } from "date-fns";
+import { difference } from "next/dist/build/utils";
 import { Controller, useForm } from "react-hook-form";
 
 interface TripReservationProps {
     tripStartDate: Date;
     tripEndDate: Date;
     maxGuests: number;
+    pricePerDay: number;
 }
 
 interface TripReservationForm {
@@ -19,13 +22,14 @@ interface TripReservationForm {
 }
 
 
-const TripReservation = ({ maxGuests, tripStartDate, tripEndDate }: TripReservationProps) => {
+const TripReservation = ({ maxGuests, tripStartDate, tripEndDate, pricePerDay }: TripReservationProps) => {
     const { register, handleSubmit, formState: { errors }, control, watch } = useForm<TripReservationForm>();
     const onSubmit = (data: any) => {
         console.log({ data })
     }
 
     const startDate = watch("startDate");
+    const endDate = watch("endDate");
 
     return (
         <div>
@@ -89,8 +93,18 @@ const TripReservation = ({ maxGuests, tripStartDate, tripEndDate }: TripReservat
                     errorMessage={errors?.guests?.message}
                 />
                 <div className="flex justify-between mt-3">
-                    <p className="font-semibold text-md text-primaryDarker">Total: 7 noites</p>
-                    <p className="font-semibold text-md text-primaryDarker">R$ 0,00</p>
+                    <p className="font-semibold text-md text-primaryDarker">Total:
+                        {
+                            startDate && endDate ?
+                                ` ${differenceInDays(endDate, startDate)}` : '0'
+                        } noite(s)
+                    </p>
+                    <p className="font-semibold text-md text-primaryDarker">
+                        {
+                            startDate && endDate ?
+                                `R$ ${differenceInDays(endDate, startDate) * pricePerDay}` : 'R$ 0'
+                        }
+                    </p>
                 </div>
                 <div className="pb-10 border-b border-b-grayLighter w-full">
                     <Button onClick={() => handleSubmit(onSubmit)()} className="mt-3 w-full">Reservar agora</Button>
