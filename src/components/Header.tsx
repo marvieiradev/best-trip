@@ -38,8 +38,8 @@ const Header = () => {
                     <Image height={32} width={32} src={data.user.image!} alt={data.user.name!} className="rounded-full shadow-md" />
 
                     {menuIsOpen && (
-                        <div className="z-50 absolute top-14 right-0 w-[150px] h-[75px] bg-white border-grayLighter border border-solid rounded-lg shadow-md flex flex-col justify-center items-start p-1">
-                            <Link href="/my-trips">
+                        <div className="z-50 absolute top-14 right-0 w-[150px] h-[75px] bg-white border-grayLighter border border-solid rounded-lg shadow-md flex flex-col justify-center items-start p-1" onMouseLeave={() => setMenuIsOpen(false)}>
+                            <Link href="/my-trips" onClick={() => setMenuIsOpen(false)}>
                                 <button className="text-primary text-sm font-semibold">
                                     <div className="flex flex-row items-center gap-2 pb-2 border-b border-grayLighter">
                                         <GiAirplaneDeparture size={16} className="text-primary" />
