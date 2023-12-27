@@ -10,10 +10,11 @@ import { useRouter } from "next/navigation";
 interface UserReservationItemProps {
     reservation: Prisma.TripReservationGetPayload<{
         include: { trip: true }
-    }>
+    }>;
+    fetchReservations: () => void;
 }
 
-const UserReservationItem = ({ reservation }: UserReservationItemProps) => {
+const UserReservationItem = ({ reservation, fetchReservations }: UserReservationItemProps) => {
     const router = useRouter();
     const { trip } = reservation;
     const handleDeleteClick = async () => {
@@ -24,7 +25,7 @@ const UserReservationItem = ({ reservation }: UserReservationItemProps) => {
             return toast.error("Ocorreu um erro ao cancelar a reserva", { position: "top-center", autoClose: 3000 });
         }
         toast.success("Reserva cancelada com sucesso!", { position: "top-center", autoClose: 3000 });
-        router.refresh();
+        fetchReservations()
     };
     return (
         <div>
