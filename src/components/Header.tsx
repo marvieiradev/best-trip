@@ -2,9 +2,11 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { AiOutlineMenu } from "react-icons/ai"
 import { CiLogout } from "react-icons/ci"
+import { GiAirplaneDeparture } from "react-icons/gi";
 
 const Header = () => {
     const [menuIsOpen, setMenuIsOpen] = React.useState(false);
@@ -15,6 +17,7 @@ const Header = () => {
         signOut();
     }
     const handleMenuClick = () => setMenuIsOpen(!menuIsOpen);
+
     return (
         <div className="container mx-auto p-5 py-0 h-[93px] flex justify-between items-center">
             <div className="relative h-[32px] w-[132px]">
@@ -35,13 +38,21 @@ const Header = () => {
                     <Image height={32} width={32} src={data.user.image!} alt={data.user.name!} className="rounded-full shadow-md" />
 
                     {menuIsOpen && (
-                        <div className="z-50 absolute top-14 left-0 w-full h-full bg-white rounded-lg shadow-md flex flex-col justify-center items-center">
+                        <div className="z-50 absolute top-14 right-0 w-[150px] h-[75px] bg-white border-grayLighter border border-solid rounded-lg shadow-md flex flex-col justify-center items-start p-1">
+                            <Link href="/my-trips">
+                                <button className="text-primary text-sm font-semibold">
+                                    <div className="flex flex-row items-center gap-2 pb-2 border-b border-grayLighter">
+                                        <GiAirplaneDeparture size={16} className="text-primary" />
+                                        Minhas viagens
+                                    </div>
+                                </button>
+                            </Link>
+
                             <button className="text-primary text-sm font-semibold" onClick={handleLogoutClick}>
-                                <div className="flex flex-row items-center gap-2">
+                                <div className="flex flex-row items-center gap-2 pt-2">
                                     <CiLogout size={16} className="text-primary" />
                                     Logout
                                 </div>
-
                             </button>
                         </div>
                     )}
