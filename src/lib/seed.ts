@@ -111,7 +111,7 @@ async function main() {
             {
                 name: "Mountain Peak Lodge",
                 description:
-                    "O Mountain Haven Retreat é um hotel boutique de luxo localizado em uma região montanhosa serena, cercada por paisagens deslumbrantes e tranquilidade. Com quartos elegantemente decorados, o hotel oferece aos hóspedes uma estadia confortável e relaxante, em meio à natureza intocada. Os hóspedes podem desfrutar de refeições gourmet preparadas com ingredientes frescos e locais no restaurante do hotel, enquanto apreciam vistas deslumbrantes das montanhas. Com acesso a trilhas para caminhadas, atividades ao ar livre e um spa relaxante, o Mountain Haven Retreat proporciona aos seus hóspedes uma experiência de luxo em um refúgio natural e encantador.",
+                    "O Mountain Peak Lodge é um hotel boutique de luxo localizado em uma região montanhosa serena, cercada por paisagens deslumbrantes e tranquilidade. Com quartos elegantemente decorados, o hotel oferece aos hóspedes uma estadia confortável e relaxante, em meio à natureza intocada. Os hóspedes podem desfrutar de refeições gourmet preparadas com ingredientes frescos e locais no restaurante do hotel, enquanto apreciam vistas deslumbrantes das montanhas. Com acesso a trilhas para caminhadas, atividades ao ar livre e um spa relaxante, o Mountain Peak Lodge proporciona aos seus hóspedes uma experiência de luxo em um refúgio natural e encantador.",
                 startDate: new Date("2024-01-15"),
                 endDate: new Date("2024-01-30"),
                 location: "Montreal, Canadá",
@@ -132,7 +132,7 @@ async function main() {
             {
                 name: "Encanto da Serra",
                 description:
-                    "O Recanto Sereno é uma pousada encantadora localizada em uma pequena cidade costeira, no litoral sul do Brasil. Com uma atmosfera acolhedora e familiar, a pousada oferece aos hóspedes uma estadia tranquila e relaxante. Os quartos são confortáveis e bem decorados, proporcionando um refúgio aconchegante. Os hóspedes podem desfrutar de um café da manhã delicioso, com opções caseiras e regionais, que é servido com carinho. Além disso, o Recanto Sereno está a uma curta caminhada da praia, permitindo que os hóspedes desfrutem de momentos de descanso e lazer à beira-mar. Com uma equipe atenciosa e simpática, o Recanto Sereno proporciona aos seus hóspedes uma estadia relaxante e memorável em um ambiente sereno no litoral do Brasil.",
+                    "Encanto da Serra é uma pousada encantadora localizada em uma pequena cidade montanhosa, ao sul da Noruega. Com uma atmosfera acolhedora e familiar, a pousada oferece aos hóspedes uma estadia tranquila e relaxante. Os quartos são confortáveis e bem decorados, proporcionando um refúgio aconchegante. Os hóspedes podem desfrutar de um café da manhã delicioso, com opções caseiras e regionais, que é servido com carinho. Além disso, o Encanto da Serra está a uma curta caminhada de várias montanhas nevadas, permitindo que os hóspedes desfrutem de momentos de descanso e lazer. Com uma equipe atenciosa e simpática, o Encanto da Serra proporciona aos seus hóspedes uma estadia relaxante e memorável.",
                 startDate: new Date("2024-03-03"),
                 endDate: new Date("2024-03-30"),
                 location: "Oslo, Noruega",
