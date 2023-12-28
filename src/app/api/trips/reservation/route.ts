@@ -8,15 +8,15 @@ export async function POST(request: Request) {
 
     const trip = await prisma.trip.findUnique({
         where: {
-            id: req.tripId,
-        }
+            id: tripId,
+        },
     });
 
     if (!trip) {
         return new NextResponse(
             JSON.stringify({
                 error: {
-                    code: 'TRIP_NOT_FOUND',
+                    code: "TRIP_NOT_FOUND",
                 },
             })
         );
@@ -32,6 +32,7 @@ export async function POST(request: Request) {
             guests,
         },
     });
+
     return new NextResponse(
         JSON.stringify({
             success: true,

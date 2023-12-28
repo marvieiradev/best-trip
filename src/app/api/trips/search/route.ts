@@ -9,13 +9,11 @@ const generateSearchQuery = (text: string, startDate?: string | null, budget?: s
                     search: text,
                 },
             },
-
             {
                 description: {
                     search: text,
                 },
             },
-
             {
                 location: {
                     search: text,
@@ -39,6 +37,8 @@ const generateSearchQuery = (text: string, startDate?: string | null, budget?: s
         };
     }
 
+    console.log({ budget });
+
     if (budget !== "undefined" && budget !== "null") {
         searchQuery = {
             ...searchQuery,
@@ -46,13 +46,13 @@ const generateSearchQuery = (text: string, startDate?: string | null, budget?: s
                 ...searchQuery.AND,
                 {
                     pricePerDay: {
-                        lte: budget,
+                        lte: Number(budget),
                     },
                 },
             ],
-
         };
     }
+
     return searchQuery;
 };
 
@@ -64,14 +64,16 @@ export async function GET(request: Request) {
     const budget = searchParams.get("budget");
 
     if (!text) {
-        return new NextResponse(JSON.stringify({
-            message: "Missing text parameter."
-        }),
+        return new NextResponse(
+            JSON.stringify({
+                message: "Missing text parameter",
+            }),
             { status: 400 }
         );
     }
+
     const trips = await prisma.trip.findMany({
-        where: generateSearchQuery(text, startDate, budget)
+        where: generateSearchQuery(text, startDate, budget),
     });
 
     return new NextResponse(JSON.stringify(trips), { status: 200 });
