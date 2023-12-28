@@ -21,7 +21,7 @@ const Trips = async () => {
 
     return (
         <div className="container mx-auto flex flex-col items-center p-5">
-            <h1 className="text-primaryDarker font-semibold text-xl">{trips.length > 0 ? "Viagens Encontradas" : "Viagens não encontradas"}</h1>
+            <h1 className="text-primaryDarker font-semibold text-xl">Viagens Encontradas</h1>
             <h2 className="text-grayPrimary font-medium mb-5">{trips.length > 0 ? "Listamos as melhores hospedagens pra você!" : "Não encontramos nada nos seus parâmetros."}</h2>
             {trips.length <= 0 && (
                 <Link href={"/"} className="w-full">

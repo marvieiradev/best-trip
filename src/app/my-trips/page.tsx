@@ -34,7 +34,7 @@ const MyTrips = () => {
                 <div className="flex flex-col mt-5">
                     <p className="mt-2 font-medium text-primaryDarker text-lg text-center">Você ainda não tem nenhuma reserva :(</p>
                     <Link href="/">
-                        <Button className="w-full mt-5">Fazer reserva</Button>
+                        <Button variant="outlined" className="w-full mt-5">Fazer reserva</Button>
                     </Link>
                 </div>
             )}
