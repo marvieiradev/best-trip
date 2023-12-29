@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 interface TripLocationProps {
     location: string;
@@ -15,9 +16,12 @@ const TripLocation = ({ location, locationDescription }: TripLocationProps) => {
             </div>
             <h3 className="text-primaryDarker text-sm font-semibold mt-3 lg:text-base lg:mt-5">{location}</h3>
             <p className="text-xs text-primaryDarker mt-2 leading-5 lg:text-sm lg:mt-4">{locationDescription}</p>
-            <div className="lg:flex lg:justify-center lg:items-center">
-                <Button variant="outlined" className="w-full mt-5 lg:w-1/3">Ver no Google Maps</Button>
-            </div>
+
+            <Link href={`https://www.google.com.br/maps/place/${location}`}>
+                <div className="lg:flex lg:justify-center lg:items-center">
+                    <Button variant="outlined" className="w-full mt-5 lg:w-1/3">Ver no Google Maps</Button>
+                </div>
+            </Link>
         </div>
     );
 }
