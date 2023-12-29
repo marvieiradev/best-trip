@@ -81,8 +81,9 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
     const guests = searchParams.get("guests");
 
     return (
-        <div className="container mx-auto p-5">
+        <div className="container mx-auto p-5 lg:max-h-[600px]">
             <h1 className="font-semibold text-xl text-primaryDarker">Sua Viagem</h1>
+
             <div className="flex flex-col p-5 mt-5 border-grayLighter border-solid border shadow-lg rounded-lg">
                 <div className="flex items-center gap-3 pb-5 border-b border-grayLighter border-solid">
                     <div className="relative h-[106px] w-[124px]">
