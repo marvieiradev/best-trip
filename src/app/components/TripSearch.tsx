@@ -24,7 +24,7 @@ const TripSearch = () => {
             <h1 className="font-semibold text-2xl text-primaryDarker text-center lg:text-[2.5rem]">
                 Encontre sua próxima <span className="text-primary">viagem!</span>
             </h1>
-            <div className="flex flex-col gap-4 mt-5 lg:flex-row max-w-[940px] lg:mx-auto lg:mt-12 lg:p-4 lg:bg-primary lg:bg-opacity-20 lg:rounded-lg">
+            <div className="flex flex-col gap-4 mt-5 lg:flex-row max-w-[940px] lg:h-[76px] lg:mx-auto lg:mt-12 lg:p-4 lg:bg-primary lg:bg-opacity-20 lg:rounded-lg">
                 <Input placeholder="Onde você quer ir?"
                     error={!!errors.text}
                     errorMessage={errors.text?.message}
@@ -56,7 +56,7 @@ const TripSearch = () => {
                         )}
                     />
                 </div>
-                <Button onClick={() => handleSubmit(onSubmit)()} className="lg:w-1/2">Buscar</Button>
+                <Button onClick={() => handleSubmit(onSubmit)()} className="lg:w-1/2 max-h-[38px]">Buscar</Button>
             </div>
         </div>
     );
