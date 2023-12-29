@@ -19,6 +19,11 @@ const generateSearchQuery = (text: string, startDate?: string | null, budget?: s
                     search: text,
                 },
             },
+            {
+                locationDescription: {
+                    search: text,
+                },
+            },
         ],
         AND: [],
     };
