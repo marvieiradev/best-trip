@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Best Trip
 
-## Getting Started
+Sistema de reserva de viagens desenvolvido durante a FSW, evento cujo objetivo principal é criar projetos relevantes, utilizando as tecnologias mais modernas e demandadas pelo mercado.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React**: Uma biblioteca JavaScript popular para construir interfaces de usuário interativas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js 13**: Um framework React que oferece renderização do lado do servidor (SSR), geração estática (SSG), entre muitos outros recursos.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next Auth**: Biblioteca para autenticação de usuários com OAuth.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Postgres**: Um sistema de gerenciamento de banco de dados relacional.
 
-## Learn More
+- **Prisma**: Um ORM (Object-Relational Mapping) para Node.js e TypeScript.
 
-To learn more about Next.js, take a look at the following resources:
+- **Tailwind CSS**: Um framework CSS que oferece várias classes para utilização já pré-estilizadas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **API do Stripe**: Uma API de pagamento popular para processar pagamentos online de forma segura.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Funcionalidades
 
-## Deploy on Vercel
+- **Login com o Google**: Permitimos que os usuários façam login usando suas contas do Google para uma experiência de autenticação simplificada.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Navegação por Categorias**: Os usuários podem buscar destinos por categorias, facilitando a reserva.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Busca Complexa**: Os usuários podem fazer buscas de forma complexas por palavras chave, datas disponíveis e por preço.
+
+- **Gerenciamento de Viagens**: Os usuários podem adicionar reservar e até cancelar as reservas já feitas caso seja necessário.
+
+- **Pagamento do Pedido com a API do Stripe**: Oferecemos uma experiência segura de pagamento online com a integração da API do Stripe, incluindo o uso de webhooks para processar eventos relacionados ao pagamento. Os usuários podem concluir suas reservas com facilidade e segurança.
+
+## Demonstração
+
+https://best-trip.vercel.app/
+
